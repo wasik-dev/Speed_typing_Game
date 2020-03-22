@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Speed_Typing </title>
+    
+       <link rel = "stylesheet" href="nevigation.css">
+        <link rel = "stylesheet" href="menu.css">
+   <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    
+    
+    
+	<script type="text/javascript" src="javascriptpart.js"></script>
+   
+      <link rel = "stylesheet" href="ghosttext.css">
+    <link rel = "stylesheet" href="L_background.css">
+    
+	<style>
+
+
+      body{
+
+
+
+    margin: 0;
+    padding: 0 ;
+    display: flex ;
+    /*justify-content: center;*/
+      /*align-items:  center ;*/ 
+    min-height: 100vh;
+   /* background: #031321;*/
+    background:#484848;
+    font-family: consolas;
+    text-align: center;
+          font-family: 'Cabin Sketch', cursive;
+
+}
+    
+       
+       .centreDiv{
+            position: absolute;
+            top:50%;
+            left: 50%;
+           
+           
+           transform: translate(-50%,-50%);
+            text-align: center;
+            
+        }
+        
+        
+        
+        /*.mainDiv{
+             width: 100%;
+             height: 100vh;
+             position: relative;
+             
+              background: grey;
+
+
+         }
+        */
+
+		#val{
+			height:60px;
+			width:590px;
+			font-size:19px;
+			border-color:black;
+			padding:5px;
+           
+
+			background-color: azure;
+             box-shadow: 0 0 2px rgba(0,0,1,1);
+             border-radius: 10px 10px 10px 10px ;
+             border: 10px solid #34495e;
+			
+		}
+	
+		#gameCanvas{
+			margin-left:20%;
+            box-shadow:gray;
+        
+            
+		}
+		
+    
+      
+		
+/* glowing button style start
+*/ 
+a{
+    color:greenyellow;
+    font-family: consolas;
+
+    
+}
+.mainbtn{
+
+    background-color: #031321;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: greenyellow;
+   
+    
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition:0.2s;
+    
+    
+
+}
+
+.mainbtn:hover{
+
+
+    color: red;
+    background:greenyellow;
+  
+    box-shadow: 0 0 10px greenyellow, 0 0 40px greenyellow, 0 0 80px greenyellow ;
+     
+    transition-delay: 1s;
+
+
+    
+
+
+
+}
+a:hover{
+    color:black;
+    transition-delay: 0.5s;
+    
+}
+    
+.mainbtn span {
+
+ position: absolute;
+ display: block;
+
+}
+
+.mainbtn span:nth-child(1){
+
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,transparent,darkgreen);
+
+
+}
+
+.mainbtn:hover span:nth-child(1)
+{
+   left: 100%;
+   transition: 1s;
+
+} 
+
+.mainbtn span:nth-child(3){
+
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg,transparent,darkgreen);
+
+
+}
+
+.mainbtn:hover span:nth-child(3)
+{
+   right: 100%;
+   transition: 1s;
+    transition-delay: 0.5s;
+} 
+
+.mainbtn span:nth-child(2){
+
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,darkgreen);
+
+
+}
+
+.mainbtn:hover span:nth-child(2)
+{
+   top: 100%;
+   transition: 1s;
+   transition-delay:0.25s;
+
+}   
+
+.mainbtn span:nth-child(4){
+
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,darkgreen);
+
+
+}
+
+.mainbtn:hover span:nth-child(4)
+{
+   bottom: 100%;
+   transition: 1s;
+   transition-delay:0.75s;
+
+} 
+/* glowing button style end
+*/ 
+
+
+
+
+    
+            
+ .box2{
+  
+ width:1400px;
+  height: 200px;
+  border: 3px  white;
+  margin-left:20px ;
+  position: relative;
+ 
+}
+.item2{
+background-color:white;
+position: absolute;
+  left: 410px;
+  top: 14px;
+}
+ .box1{
+  
+ width:1400px;
+  height: 210px;
+  border: 5px  white;
+  margin-left:20px ;
+  position: relative;
+ 
+}
+
+   .item1{
+     width: 1000px;
+       height: 0px;
+position:absolute;
+  left: 80px;
+  top: 0px;
+       background-color: white;
+}     
+
+ .box3{
+  
+ width:1400px;
+  height: 210px;
+  border: 5px  white;
+  margin-left:20px ;
+     margin-top: 30px;
+  position: relative;
+ 
+}
+    
+   .item3{
+background-color:white;
+position: absolute;
+  left: 500px;
+  bottom:0px;
+}     
+
+h1{
+            
+		text-align: left;
+     font-size: 25px;
+           
+		}
+		
+		
+        h3{
+            font-size: 30px;
+            margin-top: 20px;
+            margin-right: 5px;
+            color: black;
+        }
+        
+
+	</style>
+</head>
+<body> 
+      <div class="page">
+
+
+      <span class="menu_toggle">
+          <h3>Menu</h3>
+    <i class="menu_open fa fa-bars fa-lg"></i>
+    <i class="menu_close fa fa-times fa-lg"></i>
+  </span>
+  <ul1 class="menu_items">
+    <li><a href="main.html"><i class="icon fa fa-home fa-2x"></i> Home</a></li>
+    <li><a href="contact.html"><i class="icon fa fa-phone fa-2x"></i>Contact</a></li>
+    <li><a href="about.html"><i class="icon fa fa-heart fa-2x"></i>About</a></li>
+  </ul1>
+      <main class="content">
+     <div class="container">
+          <div class="particle"><h1>A</h1></div>
+          <div class="particle"><h1>B</h1></div>
+          <div class="particle"><h1>C</h1></div>
+          <div class="particle"><h1>V</h1></div>
+          <div class="particle"><h1>Y</h1></div>
+          <div class="particle"><h1>X</h1></div>
+          <div class="particle"><h1>K</h1></div>
+          <div class="particle"><h1>L</h1></div>
+          <div class="particle"><h1>M</h1> </div>
+          <div class="particle"><h1></h1></div>
+          <div class="particle"><h1>O</h1></div>
+          <div class="particle"><h1>N</h1></div>
+          <div class="particle"><h1>P</h1></div>
+          <div class="particle"><h1>R</h1></div>
+          <div class="particle"><h1>S</h1></div>
+          <div class="particle"><h1>T</h1></div>
+     
+          <div class="border"></div>
+          <div class="border"></div>
+     
+     
+
+<div class="mainDiv">
+      <div class="centerDiv">
+
+            <div class="box3">
+     <div class="item3">
+<ul> 
+    
+    
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li> </li>
+     <li></li>
+     <li>r</li>
+     <li>e</li>
+     <li>h</li>
+      <li>s</li>
+      <li>a</li>
+      <li>m </li>
+     <li>S </li>
+     <li>.</li>
+     <li>y </li>
+     <li>e</li>
+     <li>K </li>
+    
+     
+     
+  </ul>
+          
+<h1>                Let's see how fast you are!!! </h1>
+         
+   </div> 
+
+    </div>
+ 
+           <div class="box1">
+     <div class="item1">
+ <canvas id="gameCanvas" height="200" width="900"> </canvas><hr>
+
+         </div>
+
+    </div>
+    </div>
+
+    <div class="box2">
+     <div class="item2">
+        
+         
+             <input type="text" name="" id="val" placeholder="start writing here..." onclick="check()"></input>
+          
+         <button id="btn" class="mainbtn">  
+     
+  <a href="">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       Restart 
+       </a>
+      </button> 
+        </div>
+        
+    
+    
+
+    </div>
+
+
+
+        </div>
+</div> 
+ </main> 
+</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    // elements
+var $page = $('.page');
+
+$('.menu_toggle').on('click', function(){
+  $page.toggleClass('shazam');
+});
+$('.content').on('click', function(){
+  $page.removeClass('shazam');
+});
+    
+</script>
+
+
+
+</body>
+    <svg>
+     <defs>
+         <filter id='goo'>
+         
+         <feGaussianBlur in='SourceGraphic'
+                         stdDeviation ='10'/>
+             <feColorMatrix in='name' mode='matrix'
+                            values='1 0 0 0 0
+                                    0 1 0 0 0
+                                    0 0 1 0 0
+                                    0 0 0 30 -15' />
+             <feBlend in='SourceGraphic' />
+             
+             </filter>
+         </defs>
+     </svg>
+</html>
+
+
+
+

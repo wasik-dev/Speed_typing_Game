@@ -1,0 +1,199 @@
+*{
+    
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    
+}
+body{
+    
+    
+    width: 120%;
+    height:100vh;
+    
+}
+.container{
+    
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    filter: url(#goo);
+    
+}
+
+
+
+.particle{
+    
+    
+    width: 100px;
+    height: 100px;
+    top: -20%;
+    background-color: black;
+    position: absolute;
+    border-radius: 40%;
+    animation: fall 15s infinite;
+    
+    
+}
+.particle h1{
+    
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    font-size: 2em;
+    position: relative;
+    top: 50%;
+    color: white;
+    transform: translate(40%,-50%);
+    
+}
+@keyframes fall{
+      0% {top: -20%;}
+      20% {top: 0%;}
+      80% {top: 85%;}
+      100% {top: 100%;}
+     
+}
+.particle:nth-of-type(2n){
+    width: 60px;
+    height: 60px;
+    
+}
+.particle:nth-of-type(3n){
+    width: 120px;
+    height: 120px;
+    
+}
+.particle:nth-of-type(1){
+    left: 20%;
+        animation-delay: 1s;
+    
+    
+}
+
+
+.particle:nth-of-type(2){
+    left: 10%;
+        animation-delay: 2s;
+    
+    
+}
+.particle:nth-of-type(3){
+    left: 15%;
+        animation-delay: 3s;
+    
+    
+}
+
+.particle:nth-of-type(4){
+    left: 85%;
+        animation-delay: 4s;
+    
+    
+}
+.particle:nth-of-type(5){
+    left: 1%;
+        animation-delay: 5s;
+    
+    
+}
+.particle:nth-of-type(6){
+    left: 70%;
+        animation-delay: 6s;
+    
+    
+}
+.particle:nth-of-type(7){
+    left: 65%;
+        animation-delay: 7s;
+    
+    
+}
+
+.particle:nth-of-type(8){
+    left: 90%;
+        animation-delay: 8s;
+    
+    
+}
+.particle:nth-of-type(9){
+    left: 75%;
+        animation-delay: 1s;
+    
+    
+}
+.particle:nth-of-type(10){
+    left: 80%;
+    
+        animation-delay: 1s;
+    
+    
+}
+.particle:nth-of-type(11){
+    left: 91%;
+        animation-delay: 11s;
+    
+    
+    
+}
+.particle:nth-of-type(12){
+    left: 10%;
+    
+    animation-delay: 12s;
+    
+    
+    
+}
+.particle:nth-of-type(13){
+    left: 79%;
+        animation-delay: 13s;
+    
+    
+}
+.particle:nth-of-type(14){
+    left: 70%;
+        animation-delay: 14s;
+    
+    
+}
+.particle:nth-of-type(15){
+    
+    left: 11%;
+    animation-delay: 15s;
+    
+    
+    
+}
+.border{
+    
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 7%;
+    
+    
+}
+.border:nth-last-of-type(1){
+  
+    top: 0;
+    left: 0;
+    
+    
+}
+.border:nth-last-of-type(2){
+    bottom: 0;
+    left:0;
+    
+    
+    
+}
+
+h1{
+    
+   text-align: center;
+    
+}

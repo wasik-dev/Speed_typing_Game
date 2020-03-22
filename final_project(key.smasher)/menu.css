@@ -1,0 +1,177 @@
+:root{
+    
+    
+    --primary-color:rgba(0,0,0, 0.45);
+    --overlay-color:rgba(25, 21, 21, 0.75);
+    /*--primary-color:rgba(13,110,139, 0.75);
+    --overlay-color: rgba(24,39,51,0.85);*/
+    --menu-speed: 0.75s;
+    
+}
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+}
+.menu-wrap .toggler{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+   /* cursor: pointer;*/
+    width: 50px;
+    height: 50px;
+    /*opacity: 0;*/
+    
+}
+.menu-wrap .hamburger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/*hambruger line*/
+.menu-wrap .hamburger > div1{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    
+    
+}
+/*top and bottom */
+.menu-wrap .hamburger > div1:before,
+.menu-wrap .hamburger > div1:after {
+    
+    
+    
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    
+}
+/*moves line down */
+
+.menu-wrap .hamburger > div1:after{
+    top: 10px;
+    
+}
+
+/*toggler animate*/
+.menu-wrap .toggler:checked + .hamburger >div1 {
+    
+    transform:rotate(135deg);
+    
+}
+
+/*turn lines into x */
+
+.menu-wrap .toggler:checked + .hamburger >div1:before,
+.menu-wrap .toggler:checked + .hamburger >div1:after{
+    top: 0;
+    transform: rotate(90deg);
+    
+}
+/*rotate on hover when checked*/
+
+.menu-wrap .toggler: checked:hover + .hamburger >div1 {
+    transform:  rotate(225deg);
+    
+    
+}
+
+/*show menu*/
+
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+    
+    
+    
+    
+}
+.menu-wrap .toggler:checked ~ .menu >div1 {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+    
+}
+.menu-wrap .toggler:checked ~ .menu >div1>div1{
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    
+}
+
+
+.menu-wrap .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.menu-wrap .menu > div1 {
+    background: var(--overlay-color);
+    border-radius: 30%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    
+    
+}
+.menu-wrap .menu > div1 >div1 {
+    text-align: center;
+    max-height: 100vh;
+    max-width: 90vw;
+    transition: opacity 0.4s ease;
+    opacity:0
+    
+}
+.menu-wrap .menu > div1 > div1 > ul1 > li1{
+    font-family: 'Cabin Sketch', cursive;
+    list-style:circle;
+    color:white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    
+
+    
+    
+    
+}
+.menu-wrap .menu > div1 > div1 > ul1 > li1 > a1 {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    
+    
+    
+}
